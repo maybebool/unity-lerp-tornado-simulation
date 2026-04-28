@@ -1,7 +1,7 @@
 # Unity Lerp Tornado Simulation
 
 <p align="center">
-  <img src="Recordings/image_001_0000.jpg" alt="Tornado Simulation" height="280">
+  <img src="Recordings/image_001_0000.jpg" alt="Tornado Simulation" height="480">
 </p>
 
 [![Unity](https://img.shields.io/badge/Unity-2021.3+-000000?style=flat-square&logo=unity&logoColor=white)](https://unity.com/)
