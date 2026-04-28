@@ -1,10 +1,10 @@
 # Unity Lerp Tornado Simulation
 
 <p align="center">
-  <img src="Recordings/image_001_0000.jpg" alt="Tornado Simulation" height="280">
+  <img src="Recordings/image_001_0000.jpg" alt="Tornado Simulation" height="500">
 </p>
 
-[![Unity](https://img.shields.io/badge/Unity-2021.3+-000000?style=flat-square&logo=unity&logoColor=white)](https://unity.com/)
+[![Unity](https://img.shields.io/badge/Unity-2022.3+-000000?style=flat-square&logo=unity&logoColor=white)](https://unity.com/)
 [![C#](https://img.shields.io/badge/C%23-Rigidbody_Physics-512BD4?style=flat-square&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
 [![Physics](https://img.shields.io/badge/Physics-Vortex_Dynamics-FF6F61?style=flat-square)](https://docs.unity3d.com/Manual/PhysicsSection.html)
 [![Lerp](https://img.shields.io/badge/Lerp-Interpolation_Remap-77B829?style=flat-square)](https://docs.unity3d.com/ScriptReference/Vector3.Lerp.html)
@@ -39,7 +39,7 @@ where $a = 0$, $b = 10$, $t_a = 1$, $t_b = 0$. This produces $t \in [0, 1]$ that
 
 A threshold parameter $r$ controls the transition between pull and push behaviour:
 
-$$\vec{F} = \begin{cases} \hat{d} \cdot F_c \cdot m \cdot t & \text{if } t \leq r \\[6pt] -\hat{d} \cdot F_c \cdot m \cdot F_p & \text{if } t > r \end{cases}$$
+$$\vec{F} = \begin{cases} \hat{d} \cdot F_c \cdot m \cdot t & \text{if } t \leq r \\ -\hat{d} \cdot F_c \cdot m \cdot F_p & \text{if } t > r \end{cases}$$
 
 | Symbol | Meaning |
 |:---|:---|
@@ -74,11 +74,11 @@ This creates a pull-push cycle: objects accelerate toward the centre, then get e
 git clone https://github.com/maybebool/Unity-Tornado.git
 ```
 
-1. Open the project in Unity 2021.3+.
+1. Open the project in Unity 2022.3+.
 2. Open the Tornado scene.
 3. Press Play and click the spawn buttons to add objects into the vortex.
 
-**Prerequisites:** Unity 2021.3+.
+**Prerequisites:** Unity 2022.3+.
 
 ## Tech Stack
 
@@ -87,7 +87,7 @@ git clone https://github.com/maybebool/Unity-Tornado.git
 
 | Category | Technology |
 |:---|:---|
-| Engine | Unity 2021.3+ (Rigidbody, Trigger Colliders) |
+| Engine | Unity 2022.3+ (Rigidbody, Trigger Colliders) |
 | Language | C# — custom interpolation and force calculations |
 | Animation | Unity Animator — pivot path trajectory |
 | Physics | Rigidbody force application, trigger volume detection |
