@@ -13,7 +13,7 @@ A physics-based tornado simulation combining linear interpolation remapping, ani
 
 ## Objective
 
-Implement a tornado effect built entirely from first-principles physics — no particle systems or pre-baked animations. Objects within the vortex volume experience distance-dependent forces computed via a custom interpolation remap, producing a natural spiraling motion where objects are pulled toward the centre, then ejected outward past a configurable threshold.
+Implement a tornado effect built entirely from first-principles physics, no particle systems or pre-baked animations. Objects within the vortex volume experience distance-dependent forces computed via a custom interpolation remap, producing a natural spiraling motion where objects are pulled toward the centre, then ejected outward past a configurable threshold.
 
 ## Methodology
 
@@ -33,7 +33,7 @@ For an object at distance $d$ from the vortex centre, the interpolation scalar $
 
 $$t = \frac{d - a}{b - a} \cdot (t_b - t_a) + t_a$$
 
-where $a = 0$, $b = 10$, $t_a = 1$, $t_b = 0$. This produces $t \in [0, 1]$ that decreases with distance — objects closer to the centre experience stronger centripetal pull.
+where $a = 0$, $b = 10$, $t_a = 1$, $t_b = 0$. This produces $t \in [0, 1]$ that decreases with distance; objects closer to the centre experience stronger centripetal pull.
 
 ### Direction Reversal
 
@@ -49,7 +49,7 @@ $$\vec{F} = \begin{cases} \hat{d} \cdot F_c \cdot m \cdot t & \text{if } t \leq 
 | $m$ | Force multiplier |
 | $r$ | Reverse indication threshold (default: 0.8) |
 
-This creates a pull-push cycle: objects accelerate toward the centre, then get ejected outward once they cross the threshold — producing the characteristic spiraling motion of a tornado.
+This creates a pull-push cycle: objects accelerate toward the centre, then get ejected outward once they cross the threshold, producing the characteristic spiraling motion of a tornado.
 
 ## Parameters
 
@@ -89,7 +89,7 @@ git clone https://github.com/maybebool/Unity-Tornado.git
 |:---|:---|
 | Engine | Unity 2022.3+ (Rigidbody, Trigger Colliders) |
 | Language | C# — custom interpolation and force calculations |
-| Animation | Unity Animator — pivot path trajectory |
+| Animation | Unity Animator - pivot path trajectory |
 | Physics | Rigidbody force application, trigger volume detection |
 
 ## Limitations & Future Work
